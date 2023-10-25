@@ -49,19 +49,18 @@
             <div class="main-body">
                 <div class="row gutters-sm">
                     <div class="col-md-4 mb-3">
-                        <div class="card" style="padding:5%;">
+                        <div class="card" style="padding:5%; position: sticky; top: 20px;">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
                                     <img src="images/me.jpg" alt="Generic placeholder image" class="img-fluid"
                                         style="width: 180px; border-radius: 10px;"></br>
-                                    <a href="{{ url('/edit-profile', Auth::user()->id) }}"
-                                        class="btn btn-dark btn-block" style="background-color:#212121"><span
+                                    <a href="#" class="btn btn-dark btn-block" style="background-color:#212121"><span
                                             class="bi bi-pen"></span> Edit Profile</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card mt-3" style="position: sticky; top: 80px;">
+                        <div class="card mt-3" style="position: sticky; top: 350px;">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <a type="button" data-toggle="collapse" data-target="#card1" aria-expanded="false"
@@ -202,8 +201,8 @@
                             </div></br>
 
                             <div class="card" style="width: 800px; border:1px solid #cecece; margin:auto;">
-                                <h5 class="card-header custom-header"><b>Order no: #3</b> <i
-                                        style="float: right;">*On Delivery</i></h5>
+                                <h5 class="card-header custom-header"><b>Order no: #3</b> <i style="float: right;">*On
+                                        Delivery</i></h5>
 
                                 <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                                     <div class="media-body order-2 order-lg-1">
@@ -330,8 +329,8 @@
 
                         <div class="collapse" id="card3">
                             <div class="card" style="width: 800px; border:1px solid #cecece; margin:auto;">
-                                <h5 class="card-header custom-header"><b>Order no: #3</b> <i
-                                        style="float: right;">*On Delivery</i></h5>
+                                <h5 class="card-header custom-header"><b>Order no: #3</b> <i style="float: right;">*On
+                                        Delivery</i></h5>
 
                                 <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                                     <div class="media-body order-2 order-lg-1">
@@ -476,6 +475,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Simulate a click on the button that triggers the collapse of card1
+            var card1Button = document.querySelector('[data-target="#card1"]');
+            if (card1Button) {
+                card1Button.click();
+            }
+        });
+    </script>
 
 </body>
 
